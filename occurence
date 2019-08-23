@@ -1,0 +1,20 @@
+//count the total number of occurences of a given charachers in string;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		System.out.println("enter the string");
+		String a=scan.next();
+		System.out.println("enter the char to find");
+		char find=scan.next().charAt(0);
+		char a1[]=a.toCharArray();
+		int i=a1.length,count=0;
+		for(int j=0;j<i;j++) {
+				if(a1[j]==find) {
+					count++;
+				}
+			}
+		System.out.println("occurence of "+find+ " is "+count);
+	}
+}
