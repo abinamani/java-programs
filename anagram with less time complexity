@@ -1,0 +1,59 @@
+import java.util.*;
+public class datatypes {
+	public static char[] convert(String a,int i){
+		char ch[]=new char[i];
+		for(int j=0;j<i;j++) {
+			ch[j]=a.charAt(j);
+		}
+		return ch;
+	}
+	public static int len(String str) {
+		int i=0;
+		try {
+			for(i=0;0<=i;i++) {
+				str.charAt(i);
+			}
+		}
+		catch(Exception e) {}
+		return i;
+	}
+	public static char[] sorting(char ch[],int len) {
+		char temp;
+		for(int i=0;i<len;i++) {
+			for(int j=i+1;j<len;j++) {
+				if(ch[i]>ch[j]) {
+					temp=ch[i];
+					ch[i]=ch[j];
+					ch[j]=temp;
+				}
+			}
+		}
+		return ch;
+	}
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Scanner scan=new Scanner(System.in);
+	String str1=scan.next();
+	String str2=scan.next();
+	int leng1=len(str1);int flag=0;
+	int leng2=len(str2);
+	if(leng1!=leng2)
+		System.out.println("not an anagram");
+	else {
+		char ch1[]=convert(str1,leng1);
+		char ch2[]=convert(str2,leng2);
+		char ch11[]=sorting(ch1,leng1);
+		char ch22[]=sorting(ch2,leng2);
+		for(int i=0;i<leng1;i++) {
+			if(ch11[i]==ch22[i]) 
+				flag=0;
+			else
+				break;
+		}
+	if(flag==0)
+		System.out.println("it is anagram");
+	else
+		System.out.println("not an anagram");
+	}
+}
+}
