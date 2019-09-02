@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class Uppcase{
+	static char ch[] ={'p','r','e','e','t','t'};
+	public static void main(String[] args){
+		to_Upper(ch);
+	}
+	//method to convert in uppercase
+	public static void to_Upper(char str[]){
+		int i=0;
+		while(str[i]!='\0'){
+			if(str[i]>= 97 && str[i]<=123){
+				str[i]-=32;
+				System.out.println(str[i]);
+			}
+			++i;
+		}
+	}
+}
