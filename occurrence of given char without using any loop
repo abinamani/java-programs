@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class duplicate {
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		String str=scan.next();
+		char ch=scan.next().charAt(0);
+		int count=counting(str,ch,0,0);
+		System.out.println("occurence of "+ch+" is "+count);
+	}
+	public static int counting(String str,char ch,int index,int count) {
+		int len=str.length();
+		if(index<len) {
+			if(ch==str.charAt(index)) {
+				count++;
+			}
+			index++;
+			count=counting(str,ch,index,count);//recursive call to functions
+		}
+		return count;
+	}
+}
