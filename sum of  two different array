@@ -1,0 +1,48 @@
+import java.util.*;
+public class sumoftwoarray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated meathod stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the array 1 size");
+		int n1=sc.nextInt();
+		System.out.println("enter the array 2 size");
+		int n2=sc.nextInt();
+		int arr1[]=new int[n1];
+		int arr2[]=new int[n2];
+		System.out.println("enter array 1 elements");
+		for(int i=0;i<n1;i++) {
+			int a=sc.nextInt();
+			arr1[i]=a;
+		}
+		System.out.println("enter array 2 elements");
+		for(int i=0;i<n2;i++) {
+			int b=sc.nextInt();
+			arr2[i]=b;
+		}
+		int max=(n1>n2)?n1:n2;
+		System.out.println("max ="+max);
+		int sum[]=new int[max];
+		int min=(n1>n2)?n2:n1;
+		System.out.println("min ="+min);
+		for(int i=0;i<max;i++) {
+			if(i<min) {
+				sum[i]=arr1[i]+arr2[i];
+			}
+			else {
+				if(min==n1) {
+					sum[i]=arr2[i]+0;
+				}
+				else {
+					sum[i]=arr1[i]+0;
+				}
+			}
+		}
+		for(int i:sum) {
+			System.out.print(i+" ");
+		}
+		
+
+	}
+
+}
