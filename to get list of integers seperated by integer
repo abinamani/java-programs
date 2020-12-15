@@ -1,0 +1,22 @@
+import java.util.*;
+import java.io.*;
+
+ class data {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner obj = new Scanner(System.in);
+		String arr[]=obj.nextLine().split(" ");
+		int n=arr.length;
+		int a[]=new int[n];
+		for(int i=0;i<arr.length;i++) {
+			a[i]=Integer.parseInt(arr[i]);
+		}
+		for(int i:a) {
+			System.out.print(i);
+			System.out.print("\t");
+		}
+    }
+
+	}
+
